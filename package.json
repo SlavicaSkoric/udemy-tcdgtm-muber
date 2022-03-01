@@ -1,0 +1,18 @@
+{
+  "name": "udemy-tcdgtm-muber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec 'mocha --recursive -R min'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mocha": "^9.2.1",
+    "mongoose": "^6.2.4",
+    "supertest": "^6.2.2"
+  }
+}
