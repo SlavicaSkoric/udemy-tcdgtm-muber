@@ -14,4 +14,6 @@ module.exports = (app) => {
   // we are not invoking the function (greeting), we are just passing a reference to the function so that it can be invoked at some future time
 
   app.post('/api/drivers', DriversController.create);
+
+  app.put('/api/drivers/:id', DriversController.edit);
 };

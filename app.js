@@ -16,4 +16,14 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 routes(app);
 
+// we can use app.use to register any type of middleware with express
+app.use((err, req, res, next) => {
+  // console.log(err);
+  res.status(422).send({ error: err.message });
+});
+// err object - will be populated-defined if the previous middleware threw an error (by that error)
+// req - incoming request object
+// res - outgoing response object
+// next - function; you can call next to forcibly go to the next middleware in the chain; you have to call next to go to the next middleware, it will not be called automatically on itself in express middleware for you
+
 module.exports = app;
